@@ -1,23 +1,14 @@
 # Graphic Design Portfolio — Prakhar Dewangan
 
-Two static portfolios sharing one scroll-driven profile-photo animation (240 frames).
-
-| Path | Site |
-|------|------|
-| `/` | Graphic-design portfolio |
-| `/product/` | Product-design portfolio — case studies under `/product/work/` |
+A static graphic-design portfolio with a scroll-driven profile-photo animation (240 frames).
 
 ## Structure
 
 ```
-index.html                 graphic-design portfolio
+index.html                 the portfolio page
 effects.css / effects.js   BorderGlow · SplashCursor · HeroSilk (vanilla ports)
-assets/                    its five project images
-product/
-  index.html               product-design portfolio
-  work/                    helix · pulse · paris · nexum · noctera + case.css
-  assets/                  project imagery for the product site
-ezgif-frame-001…240.jpg    shared animation frames
+assets/                    the five project images
+ezgif-frame-001…240.jpg    scroll animation frames
 vercel.json                cache headers for frames and assets
 ```
 
