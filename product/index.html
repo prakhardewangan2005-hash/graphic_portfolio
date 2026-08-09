@@ -242,10 +242,31 @@
   .vis-noctera .tile .tv { font-size: 19px; font-weight: 600; color: #fff; margin-top: 12px; letter-spacing: -.02em; }
   .vis-noctera .tile .tl { font-size: 9.5px; color: #7c7c8a; margin-top: 3px; }
 
+  /* nexum */
+  .vis-nexum { background: #010101; display: grid; grid-template-columns: 1fr 34%; gap: 1px; }
+  .vis-nexum .worker { padding: 20px 18px; display: grid; align-content: start; }
+  .vis-nexum .wt { display: flex; align-items: baseline; justify-content: space-between; }
+  .vis-nexum .wt h5 { font-size: 17px; font-weight: 600; color: #fff; letter-spacing: -.01em; }
+  .vis-nexum .run { font-family: var(--font-mono); font-size: 8.5px; letter-spacing: .2em; color: rgba(255,255,255,.62); display: flex; align-items: center; gap: 6px; }
+  .vis-nexum .run::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: #fff; box-shadow: 0 0 9px rgba(255,255,255,.9); }
+  .vis-nexum .wd { font-size: 10.5px; line-height: 1.62; color: rgba(255,255,255,.5); margin-top: 10px; }
+  .vis-nexum .ledger { margin-top: 18px; border-top: 1px solid rgba(255,255,255,.12); }
+  .vis-nexum .lr { display: grid; grid-template-columns: 42px 1fr auto; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .vis-nexum .lr .tm { font-family: var(--font-mono); font-size: 9px; color: rgba(255,255,255,.38); }
+  .vis-nexum .lr .ev { font-size: 10.5px; color: rgba(255,255,255,.82); }
+  .vis-nexum .lr .ct { font-family: var(--font-mono); font-size: 11px; color: #fff; }
+  .vis-nexum .mods { border-left: 1px solid rgba(255,255,255,.12); padding: 20px 16px; display: grid; align-content: start; gap: 8px; }
+  .vis-nexum .mods .m { font-size: 8.5px; letter-spacing: .2em; color: rgba(255,255,255,.4); margin-bottom: 6px; }
+  .vis-nexum .chip { border: 1px solid rgba(255,255,255,.14); border-radius: 8px; padding: 8px 10px; font-size: 10px; color: rgba(255,255,255,.6); display: flex; align-items: center; justify-content: space-between; }
+  .vis-nexum .chip.on { border-color: rgba(255,255,255,.55); color: #fff; background: rgba(255,255,255,.06); }
+  .vis-nexum .chip i { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.28); }
+  .vis-nexum .chip.on i { background: #fff; }
+
   @media (max-width: 900px) {
     .vis-helix h5 { font-size: 22px; }
     .vis-paris .about h5 { font-size: 15px; }
-    .vis-helix .rail, .vis-noctera .pipe { display: none; }
+    .vis-helix .rail, .vis-noctera .pipe, .vis-nexum .mods { display: none; }
+    .vis-nexum { grid-template-columns: 1fr; }
     .vis-pulse .stack { width: 70%; }
   }
 
@@ -364,7 +385,7 @@
         <div class="n">01</div>
         <div>
           <div class="label">Selected Work</div>
-          <h2 class="display-md">Four projects, one thesis.</h2>
+          <h2 class="display-md">Five projects, one thesis.</h2>
           <p class="body-lg intro">Ambient intelligence, real-time control, and human-centred product thinking — each shipped, each live, each measured.</p>
         </div>
       </div>
@@ -421,6 +442,39 @@
 
       <article class="surface work-card">
         <div class="wc-top"><span class="mono">04</span><span class="label">Product Designer — end to end · 2026</span></div>
+        <div class="wc-lead"><h3>NEXUM</h3><p class="body-lg">AI workers that own a job, not a prompt — each a scoped operator with its own permissions, escalation threshold, and replayable audit trail.</p></div>
+        <div class="wc-canvas">
+          <div class="vis vis-nexum">
+            <div class="worker">
+              <div class="wt"><h5>Intake Router</h5><span class="run">RUNNING</span></div>
+              <div class="wd">Reads every inbound request, classifies intent, and dispatches it to the worker that owns it — with a confidence score attached to each hop.</div>
+              <div class="ledger">
+                <div class="lr"><span class="tm">04:12</span><span class="ev">Invoice batch reconciled</span><span class="ct">1,284</span></div>
+                <div class="lr"><span class="tm">04:31</span><span class="ev">Vendor follow-ups sent</span><span class="ct">96</span></div>
+                <div class="lr"><span class="tm">05:02</span><span class="ev">Exceptions escalated</span><span class="ct">3</span></div>
+              </div>
+            </div>
+            <div class="mods">
+              <div class="m">MODULES</div>
+              <div class="chip on">Intake Router <i></i></div>
+              <div class="chip on">Ledger Sync <i></i></div>
+              <div class="chip on">Escalation Guard <i></i></div>
+              <div class="chip">Vendor Comms <i></i></div>
+              <div class="chip">Audit Trail <i></i></div>
+              <div class="chip">Shift Handoff <i></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="heading-md wc-outcome">Monthly close: 9 days → 2 days</div>
+        <div class="mono">99.2% of actions accepted without edit · 42,500+ ops tasks handled daily · 40h reclaimed per team each week</div>
+        <div class="wc-foot">
+          <span class="mono">Figma · React · Motion · Tailwind</span>
+          <span class="links"><a href="https://nexum-olive-kappa.vercel.app/" target="_blank" rel="noopener">View live</a><a href="work/nexum.html">View Case Study</a></span>
+        </div>
+      </article>
+
+      <article class="surface work-card">
+        <div class="wc-top"><span class="mono">05</span><span class="label">Product Designer — end to end · 2026</span></div>
         <div class="wc-lead"><h3>NOCTERA</h3><p class="body-lg">A live console for real-time work — capture, route, and act on streaming signals from one luminous surface.</p></div>
         <div class="wc-canvas">
           <div class="vis vis-noctera">

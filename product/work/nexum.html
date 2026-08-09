@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXUM — Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container in">
+    <a href="../index.html">← Back to portfolio</a>
+    <a href="../index.html#work">Work</a>
+  </div>
+</div>
+
+<article>
+  <header class="case-hero">
+    <div class="container">
+      <div class="tags"><span>Product · AI Agents / Ops Automation</span><span>Marketing Site &amp; Product Surface</span><span>2026</span></div>
+      <h1 class="case-title">NEXUM</h1>
+      <p class="tagline">An agent you can audit is an agent you can trust.</p>
+      <div class="case-actions">
+        <a class="primary" href="https://nexum-olive-kappa.vercel.app/" target="_blank" rel="noopener">View live</a>
+        <a href="https://github.com/prakhardewangan2005-hash" target="_blank" rel="noopener">Source</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="meta">
+      <div><div class="label">Outcome</div><div class="v">Monthly close: 9 days → 2 days</div></div>
+      <div><div class="label">Details</div><div class="v dim">99.2% of actions accepted without edit · 42,500+ ops tasks handled daily · 40h reclaimed per team each week</div></div>
+      <div><div class="label">Role</div><div class="v">Product Designer — end to end</div></div>
+      <div><div class="label">Stack</div><div class="v dim">Figma · React · Motion · Tailwind</div></div>
+    </div>
+  </div>
+
+  <div class="container case-body">
+    <section>
+      <h2>The problem</h2>
+      <p>Every AI product in the operations category sells the same thing: a chat box that promises to do your work. Ops leads don't buy it — not because the models are weak, but because a prompt has no permissions, no escalation path, and no record of what it did. The blocker isn't capability, it's accountability. Nobody signs off on automation they can't audit.</p>
+    </section>
+
+    <section>
+      <h2>Who it's for</h2>
+      <p>Operations, finance, and supply-chain teams at companies where a missed reconciliation costs real money — the people who close books, chase vendors, and answer to auditors. They already know which tasks are mechanical. What they need is a way to hand those tasks off that survives a compliance review.</p>
+    </section>
+
+    <section>
+      <h2>The product</h2>
+      <p>Nexum reframes the unit of automation from the prompt to the <em>worker</em>: a scoped operator that owns one job, holds its own permissions, and writes to an audit trail. Six modules — Intake Router, Ledger Sync, Escalation Guard, Vendor Comms, Audit Trail, Shift Handoff — compose into a runtime you turn on a piece at a time.</p>
+      <p>The Escalation Guard carries the argument. It holds a confidence threshold and hands back anything below it, so the product's honest claim is 97%, not 100%. Solutions are scoped by department rather than sold as one horizontal promise, and pricing is per worker rather than per seat — the whole team can watch the workers run and you only pay for the workers.</p>
+    </section>
+
+    <section>
+      <h2>Key decisions</h2>
+      <p>Lead with the ledger, not the chat box: the hero surface shows completed actions with timestamps and counts, because evidence sells to this buyer where a demo prompt doesn't. Make the limit a feature — the threshold that wakes a human is the most reassuring thing on the page, so it gets its own module instead of a footnote. Price per worker to make the value legible against a headcount line. And hold the whole site to an austere monochrome: near-black surface, hairline rules, one weight of white. Ops software earns trust by looking like infrastructure, not like a toy.</p>
+    </section>
+
+    <section>
+      <h2>Outcome</h2>
+      <p>The narrative moves a visitor from "another AI wrapper" to "a system with a paper trail" before the first scroll ends. Modules give a hesitant buyer a small first commitment, the department-scoped solutions answer "what ships in month one," and the audit trail answers the question that actually kills these deals. The headline result the product claims — a nine-day monthly close collapsing to two — reads as a consequence of the structure rather than a marketing number.</p>
+    </section>
+
+    <section>
+      <h2>Reflection</h2>
+      <p>Designing for AI adoption turned out to be less about showing intelligence and more about showing restraint. Every element that admitted a limit — the confidence threshold, the 3% handed back, the 99.2% rather than 100% — made the product more believable, not less. Trust is built out of the things a system refuses to do on its own.</p>
+    </section>
+  </div>
+
+  <div class="case-cta">
+    <div class="container">
+      <h2>Let's build something great.</h2>
+      <div class="row">
+        <button id="copy" data-mail="prakhardewangan2005@gmail.com">Copy Email</button>
+        <a href="../index.html">Back to Portfolio</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<script>
+const btn = document.getElementById('copy');
+btn.addEventListener('click', async () => {
+  const mail = btn.dataset.mail;
+  try { await navigator.clipboard.writeText(mail); btn.textContent = 'Copied ✓'; }
+  catch { btn.textContent = mail; }
+  setTimeout(() => btn.textContent = 'Copy Email', 1800);
+});
+</script>
+</body>
+</html>

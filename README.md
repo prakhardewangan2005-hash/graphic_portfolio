@@ -15,7 +15,7 @@ effects.css / effects.js   BorderGlow · SplashCursor · HeroSilk (vanilla ports
 assets/                    its five project images
 product/
   index.html               product-design portfolio
-  work/                    helix · pulse · paris · noctera + case.css
+  work/                    helix · pulse · paris · nexum · noctera + case.css
   assets/                  project imagery for the product site
 ezgif-frame-001…240.jpg    shared animation frames
 vercel.json                cache headers for frames and assets
