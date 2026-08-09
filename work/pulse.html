@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PULSE — Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container in">
+    <a href="../index.html">← Back to portfolio</a>
+    <a href="../index.html#work">Work</a>
+  </div>
+</div>
+
+<article>
+  <header class="case-hero">
+    <div class="container">
+      <div class="tags"><span>Product · Engineering Health</span><span>Web App (Team Console)</span><span>2025</span></div>
+      <h1 class="case-title">PULSE</h1>
+      <p class="tagline">You can't hear a team through a dashboard. You feel it through a pulse.</p>
+      <div class="case-actions">
+        <a class="primary" href="https://pulse-fawn-five.vercel.app" target="_blank" rel="noopener">View live</a>
+        <a href="https://github.com/prakhardewangan2005-hash" target="_blank" rel="noopener">Source</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="meta">
+      <div><div class="label">Outcome</div><div class="v">Cycle time: 6.1d → 3.4d (−44%)</div></div>
+      <div><div class="label">Details</div><div class="v dim">Focus time +38% · meetings −27% · adopted by 9/10 pilot squads</div></div>
+      <div><div class="label">Role</div><div class="v">Product Designer — end to end</div></div>
+      <div><div class="label">Stack</div><div class="v dim">Figma · React · D3 · Framer Motion</div></div>
+    </div>
+  </div>
+
+  <div class="container case-body">
+    <section>
+      <h2>The problem</h2>
+      <p>Engineering leaders are asked to answer one question every week — "how is the team, really?" — and the honest answer is usually a guess. DORA dashboards report the past, retros surface feelings, and 1:1s catch what people are willing to say out loud. None of them tell you, on a Tuesday afternoon, whether the team is actually shipping, or quietly grinding to a halt.</p>
+    </section>
+
+    <section>
+      <h2>Who it's for</h2>
+      <p>Engineering managers and staff leads at 20–200-person orgs who care about outcomes, not surveillance — people who want a truthful read on velocity, friction, and focus so they can protect their team instead of poking it.</p>
+    </section>
+
+    <section>
+      <h2>The product</h2>
+      <p>Pulse reads the artefacts a team already produces — commits, PRs, tickets, calendar, incidents — and models three things: momentum (are we shipping?), friction (where is work stuck?), and focus (is the team allowed to think?). A single heartbeat view shows the week at a glance; a friction map points to the exact PR, ticket, or meeting cluster that is dragging the number; and a private manager brief suggests the smallest intervention that will move it.</p>
+      <p>It is opinionated: no per-person leaderboards, no productivity scores, no green-red judgement. The unit of measurement is the team, not the individual.</p>
+    </section>
+
+    <section>
+      <h2>Key decisions</h2>
+      <p>Team-only metrics by default (individuals stay private), a friction map instead of a scoreboard, and a weekly brief that recommends one change rather than ten. The design brief was "a stethoscope, not a surveillance camera."</p>
+    </section>
+
+    <section>
+      <h2>Outcome</h2>
+      <p>Across ten pilot squads, cycle time fell from 6.1 to 3.4 days (−44%), focus time rose 38%, and recurring meetings dropped 27%. Nine of ten teams kept using it after the pilot ended — the strongest signal that the read felt truthful.</p>
+    </section>
+
+    <section>
+      <h2>Reflection</h2>
+      <p>The hardest calls were what not to build. Every stakeholder wanted an individual score; refusing it is what made managers trust the tool enough to actually act on what it said.</p>
+    </section>
+  </div>
+
+  <div class="case-cta">
+    <div class="container">
+      <h2>Let's build something great.</h2>
+      <div class="row">
+        <button id="copy" data-mail="prakhardewangan2005@gmail.com">Copy Email</button>
+        <a href="../index.html">Back to Portfolio</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<script>
+const btn = document.getElementById('copy');
+btn.addEventListener('click', async () => {
+  const mail = btn.dataset.mail;
+  try { await navigator.clipboard.writeText(mail); btn.textContent = 'Copied ✓'; }
+  catch { btn.textContent = mail; }
+  setTimeout(() => btn.textContent = 'Copy Email', 1800);
+});
+</script>
+</body>
+</html>

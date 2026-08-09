@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HELIX — Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container in">
+    <a href="../index.html">← Back to portfolio</a>
+    <a href="../index.html#work">Work</a>
+  </div>
+</div>
+
+<article>
+  <header class="case-hero">
+    <div class="container">
+      <div class="tags"><span>Product · Team SaaS</span><span>Web App</span><span>2025</span></div>
+      <h1 class="case-title">HELIX</h1>
+      <p class="tagline">Standups don't scale. Signals do.</p>
+      <div class="case-actions">
+        <a class="primary" href="https://helix-gold-rho.vercel.app" target="_blank" rel="noopener">View live</a>
+        <a href="https://github.com/prakhardewangan2005-hash" target="_blank" rel="noopener">Source</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="meta">
+      <div><div class="label">Outcome</div><div class="v">Time-to-context: 14 min → 4 min</div></div>
+      <div><div class="label">Details</div><div class="v dim">−71% · 94% preferred over standups (n=18) · 0 false positives</div></div>
+      <div><div class="label">Role</div><div class="v">Product Designer — end to end</div></div>
+      <div><div class="label">Stack</div><div class="v dim">Figma · Next.js · Three.js · R3F · Framer Motion</div></div>
+    </div>
+  </div>
+
+  <div class="container case-body">
+    <section>
+      <h2>The problem</h2>
+      <p>For most teams the daily standup is a tax on attention. People summarise yesterday for an audience that wasn't watching, and the real signal — what's blocked, risky, or drifting — gets diluted into ritual. As teams grow, it scales badly.</p>
+      <p>The information already lives in the tools teams use every day (Slack, Linear, GitHub, Figma, Notion, Calendar) — it just isn't read. So instead of asking people to report status, Helix reads commit cadence, ticket flow, design churn, and channel sentiment, and surfaces the three things that genuinely changed since you last looked.</p>
+    </section>
+
+    <section>
+      <h2>Who it's for</h2>
+      <p>Product teams — engineers, designers, and leads — who lose hours a week to status meetings and context-switching, and who already live inside a stack of connected tools. The job to be done: stay in sync without sitting in a standup.</p>
+    </section>
+
+    <section>
+      <h2>The product</h2>
+      <p>Every source flows into Helix Core, which models momentum, friction, and risk, then powers three surfaces. Pulse Map: a living network of channels, repos, and ticket queues whose density and colour shift with the last 48 hours. Risk Lens: the three things that genuinely changed, deduped across tools, with human-in-the-loop confirmation for any P1. Async Digest: a two-minute morning brief — skim, ack, or expand any line into its source thread.</p>
+      <p>It is not a dashboard. It is an ambient layer — the point is to do less standing up and more shipping.</p>
+    </section>
+
+    <section>
+      <h2>Research &amp; validation</h2>
+      <p>A pilot (n=18) anchored the product story: 94% preferred Helix over their morning standup, time-to-full-team-context dropped from 14 to 4 minutes (−71%), teams ran 3.2× fewer meetings per engineer per week, and there were zero false-positive incidents.</p>
+      <p>This set the design constraint: if the digest takes longer than a couple of minutes or surfaces noise, it fails — so ruthless reduction to three signals became the core rule.</p>
+    </section>
+
+    <section>
+      <h2>Key decisions</h2>
+      <p>Reduce to three (the discipline is the value), human-in-the-loop on anything critical, dedup the same event across tools into one signal, and stay ambient rather than another dashboard you have to go look at.</p>
+    </section>
+
+    <section>
+      <h2>Reflection</h2>
+      <p>The hardest design work was subtraction. The temptation in an intelligence product is to surface everything it can see; the value turned out to be in showing almost nothing — only what changed, only what matters.</p>
+    </section>
+  </div>
+
+  <div class="case-cta">
+    <div class="container">
+      <h2>Let's build something great.</h2>
+      <div class="row">
+        <button id="copy" data-mail="prakhardewangan2005@gmail.com">Copy Email</button>
+        <a href="../index.html">Back to Portfolio</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<script>
+const btn = document.getElementById('copy');
+btn.addEventListener('click', async () => {
+  const mail = btn.dataset.mail;
+  try { await navigator.clipboard.writeText(mail); btn.textContent = 'Copied ✓'; }
+  catch { btn.textContent = mail; }
+  setTimeout(() => btn.textContent = 'Copy Email', 1800);
+});
+</script>
+</body>
+</html>

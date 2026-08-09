@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOCTERA — Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container in">
+    <a href="../index.html">← Back to portfolio</a>
+    <a href="../index.html#work">Work</a>
+  </div>
+</div>
+
+<article>
+  <header class="case-hero">
+    <div class="container">
+      <div class="tags"><span>Product · Real-time Ops / Data</span><span>Web App (Live Console)</span><span>2026</span></div>
+      <h1 class="case-title">NOCTERA</h1>
+      <p class="tagline">Real-time is a feeling, not a refresh rate.</p>
+      <div class="case-actions">
+        <a class="primary" href="https://noctera-phi.vercel.app" target="_blank" rel="noopener">View live</a>
+        <a href="https://github.com/prakhardewangan2005-hash" target="_blank" rel="noopener">Source</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="meta">
+      <div><div class="label">Outcome</div><div class="v">Signal → action on one surface</div></div>
+      <div><div class="label">Details</div><div class="v dim">Live pipeline: Intake → Refine → Dispatch → Emit · 48ms round-trip · 312 live streams</div></div>
+      <div><div class="label">Role</div><div class="v">Product Designer — end to end</div></div>
+      <div><div class="label">Stack</div><div class="v dim">Figma · React · WebGL · Framer Motion</div></div>
+    </div>
+  </div>
+
+  <div class="container case-body">
+    <section>
+      <h2>The problem</h2>
+      <p>Real-time tools show you a firehose and call it visibility. Metrics tick, streams scroll, and a human is expected to watch — but nobody can watch a stream, and a dashboard that only refreshes doesn't help you act. The real gap sits between seeing a signal and doing something about it, fast enough to matter.</p>
+    </section>
+
+    <section>
+      <h2>Who it's for</h2>
+      <p>Operators of live systems — streaming data, event pipelines, logistics, trading, ops — who are measured in milliseconds and throughput, and who need to intervene on a live flow in seconds without spelunking through five tools to do it.</p>
+    </section>
+
+    <section>
+      <h2>The product</h2>
+      <p>Noctera is one luminous surface. A live pipeline (Intake → Refine → Dispatch → Emit) shows work moving through the system in real time; a Controls rail on the left holds the operator's hands on the wheel — Mode (Live / Replay / Forecast), a Sensitivity and Window dial to trade noise against latency, and explicit Auto-route and Guardrails toggles; and live vitals (signal rate, round-trip latency, live streams) stay glanceable at all times.</p>
+      <p>Replay lets you scrub the recent past to understand what happened; Forecast projects the flow forward; Live keeps you in the moment. One button — Launch flow — turns a configured view into a running operation.</p>
+    </section>
+
+    <section>
+      <h2>Key decisions</h2>
+      <p>Mode as the master switch, because "what am I looking at — now, before, or ahead?" is the operator's first question. A sensitivity/window dial instead of hidden config, so tuning noise-vs-latency is a first-class control. Guardrails as an explicit, visible safety toggle rather than a buried setting. And a calm, luminous dark surface where the signal glows and the chrome recedes — the opposite of a blinking wall of red.</p>
+    </section>
+
+    <section>
+      <h2>Outcome</h2>
+      <p>The design collapses monitoring and acting into a single console: latency and stream health are always in view, the pipeline makes flow legible at a glance, and the operator can route, hold, or launch without leaving the surface. The point isn't to watch faster — it's to move from signal to action in one place.</p>
+    </section>
+
+    <section>
+      <h2>Reflection</h2>
+      <p>Designing real-time is an exercise in restraint and rhythm. The hard part wasn't adding live data — it was making a firehose feel calm, controllable, and safe to act on, so "real-time" reads as composure rather than chaos.</p>
+    </section>
+  </div>
+
+  <div class="case-cta">
+    <div class="container">
+      <h2>Let's build something great.</h2>
+      <div class="row">
+        <button id="copy" data-mail="prakhardewangan2005@gmail.com">Copy Email</button>
+        <a href="../index.html">Back to Portfolio</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<script>
+const btn = document.getElementById('copy');
+btn.addEventListener('click', async () => {
+  const mail = btn.dataset.mail;
+  try { await navigator.clipboard.writeText(mail); btn.textContent = 'Copied ✓'; }
+  catch { btn.textContent = mail; }
+  setTimeout(() => btn.textContent = 'Copy Email', 1800);
+});
+</script>
+</body>
+</html>

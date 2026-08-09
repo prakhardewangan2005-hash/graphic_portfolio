@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="48%" r="72%">
+      <stop offset="0%" stop-color="#17122e"/>
+      <stop offset="55%" stop-color="#0a0818"/>
+      <stop offset="100%" stop-color="#04040a"/>
+    </radialGradient>
+    <linearGradient id="strandA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#7b5cf0"/>
+      <stop offset="35%" stop-color="#a78bfa"/>
+      <stop offset="65%" stop-color="#38d6e8"/>
+      <stop offset="100%" stop-color="#8b7bf5"/>
+    </linearGradient>
+    <linearGradient id="strandB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#3ec7e0"/>
+      <stop offset="40%" stop-color="#8b6cf0"/>
+      <stop offset="75%" stop-color="#5ad8ea"/>
+      <stop offset="100%" stop-color="#7b5cf0"/>
+    </linearGradient>
+    <filter id="bloom" x="-25%" y="-60%" width="150%" height="220%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="soft" x="-25%" y="-60%" width="150%" height="220%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="textglow" x="-15%" y="-40%" width="130%" height="180%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#bg)"/>
+
+  <!-- ambient blooms -->
+  <ellipse cx="250" cy="300" rx="200" ry="150" fill="#6d4bd8" opacity=".20" filter="url(#bloom)"/>
+  <ellipse cx="760" cy="290" rx="240" ry="160" fill="#2ea9c8" opacity=".16" filter="url(#bloom)"/>
+  <ellipse cx="1060" cy="330" rx="180" ry="140" fill="#7d5cf0" opacity=".16" filter="url(#bloom)"/>
+
+  <!-- double helix -->
+  <g opacity=".95">
+    <g filter="url(#bloom)" opacity=".75">
+      <path d="M40 300 Q115 140 190 300 T340 300 T490 300 T640 300 T790 300 T940 300 T1090 300 T1240 300" fill="none" stroke="url(#strandA)" stroke-width="16"/>
+      <path d="M40 300 Q115 460 190 300 T340 300 T490 300 T640 300 T790 300 T940 300 T1090 300 T1240 300" fill="none" stroke="url(#strandB)" stroke-width="16"/>
+    </g>
+    <path d="M70 253V347M100 224V376M130 224V376M160 253V347M220 253V347M250 224V376M280 224V376M310 253V347M370 253V347M400 224V376M430 224V376M460 253V347M520 253V347M550 224V376M580 224V376M610 253V347M670 253V347M700 224V376M730 224V376M760 253V347M820 253V347M850 224V376M880 224V376M910 253V347M970 253V347M1000 224V376M1030 224V376M1060 253V347M1120 253V347M1150 224V376"
+          stroke="#9f8cf0" stroke-width="7" opacity=".5" filter="url(#soft)"/>
+    <path d="M40 300 Q115 140 190 300 T340 300 T490 300 T640 300 T790 300 T940 300 T1090 300 T1240 300" fill="none" stroke="url(#strandA)" stroke-width="7" opacity=".95"/>
+    <path d="M40 300 Q115 460 190 300 T340 300 T490 300 T640 300 T790 300 T940 300 T1090 300 T1240 300" fill="none" stroke="url(#strandB)" stroke-width="7" opacity=".95"/>
+  </g>
+
+  <!-- particles -->
+  <g fill="#cfe9ff" opacity=".55">
+    <circle cx="330" cy="120" r="1.6"/><circle cx="470" cy="96" r="1.3"/><circle cx="620" cy="132" r="1.7"/>
+    <circle cx="780" cy="104" r="1.3"/><circle cx="905" cy="140" r="1.5"/><circle cx="250" cy="170" r="1.2"/>
+    <circle cx="1040" cy="112" r="1.4"/><circle cx="560" cy="440" r="1.4"/><circle cx="860" cy="424" r="1.2"/>
+  </g>
+
+  <!-- left rail -->
+  <g font-family="Consolas, Menlo, monospace" font-size="11.5" letter-spacing="1.6">
+    <rect x="18" y="142" width="2" height="20" fill="#a78bfa"/>
+    <circle cx="30" cy="152" r="3.4" fill="#a78bfa"/>
+    <text x="44" y="156" fill="#eceaff">01 — HERO</text>
+    <circle cx="30" cy="192" r="3.2" fill="#3a3950"/><text x="44" y="196" fill="#4b4a63">02 — SIGNAL GRID</text>
+    <circle cx="30" cy="232" r="3.2" fill="#3a3950"/><text x="44" y="236" fill="#4b4a63">03 — THESIS</text>
+    <circle cx="30" cy="272" r="3.2" fill="#3a3950"/><text x="44" y="276" fill="#4b4a63">04 — PREVIEW</text>
+    <circle cx="30" cy="312" r="3.2" fill="#3a3950"/><text x="44" y="316" fill="#4b4a63">05 — SYSTEM MAP</text>
+    <circle cx="30" cy="352" r="3.2" fill="#3a3950"/><text x="44" y="356" fill="#4b4a63">06 — VALIDATION</text>
+    <circle cx="30" cy="392" r="3.2" fill="#3a3950"/><text x="44" y="396" fill="#4b4a63">07 — PROCESS</text>
+    <circle cx="30" cy="432" r="3.2" fill="#3a3950"/><text x="44" y="436" fill="#4b4a63">08 — CLOSING</text>
+  </g>
+
+  <!-- badge -->
+  <g>
+    <rect x="418" y="30" width="364" height="38" rx="19" fill="#08131a" fill-opacity=".72" stroke="#4fd6c0" stroke-opacity=".45"/>
+    <circle cx="446" cy="49" r="4" fill="#4fd6c0"/>
+    <text x="462" y="54" font-family="Consolas, Menlo, monospace" font-size="14" letter-spacing="2.4" fill="#b8f5e8">N=18 VALIDATED · SHIPPED 2026</text>
+  </g>
+
+  <!-- headline -->
+  <g text-anchor="middle" font-weight="700" letter-spacing="-2.6">
+    <g filter="url(#textglow)" opacity=".55" fill="#b9a9ff">
+      <text x="600" y="176" font-size="76">The ambient intelligence</text>
+      <text x="600" y="252" font-size="76">layer for product teams.</text>
+    </g>
+    <text x="600" y="176" font-size="76" fill="#ffffff">The ambient intelligence</text>
+    <text x="600" y="252" font-size="76" fill="#ffffff">layer for product teams.</text>
+  </g>
+
+  <!-- subtext -->
+  <g text-anchor="middle" font-size="18.5" fill="#c3c1d4">
+    <text x="600" y="318">Helix turns scattered signals — Slack, Linear, GitHub, Figma, Notion — into a living map</text>
+    <text x="600" y="346">of your product.</text>
+    <text x="600" y="392">See momentum, friction, and risk before standups do.</text>
+    <text x="600" y="432">Built for teams who ship like organisms, not org charts.</text>
+  </g>
+
+  <text x="600" y="494" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="6" fill="#55536a">SCROLL</text>
+</svg>

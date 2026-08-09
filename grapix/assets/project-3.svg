@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 700" width="1440" height="700">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#2b2320"/>
+      <stop offset="42%" stop-color="#1c1715"/>
+      <stop offset="100%" stop-color="#0e0c0b"/>
+    </linearGradient>
+    <radialGradient id="key" cx="10%" cy="6%" r="78%">
+      <stop offset="0%"  stop-color="#8a7563" stop-opacity=".42"/>
+      <stop offset="45%" stop-color="#4a3d34" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warm" cx="78%" cy="28%" r="55%">
+      <stop offset="0%"  stop-color="#6b5344" stop-opacity=".20"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig" cx="50%" cy="50%" r="72%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity=".55"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1440" height="700" fill="url(#base)"/>
+  <rect width="1440" height="700" fill="url(#key)"/>
+  <rect width="1440" height="700" fill="url(#warm)"/>
+  <rect width="1440" height="700" fill="url(#vig)"/>
+
+  <!-- eyebrow -->
+  <rect x="104" y="42" width="34" height="2" fill="#e8912a"/>
+  <text x="152" y="48" font-family="Consolas, 'Courier New', monospace" font-size="13"
+        letter-spacing="2.6" fill="#b6b0a8">MERIDIAN</text>
+
+  <!-- headline -->
+  <g font-family="Georgia, 'Times New Roman', serif" font-weight="700"
+     font-size="112" fill="#f1ede6" letter-spacing="-1.5">
+    <text x="104" y="178">Civic</text>
+    <text x="104" y="300">infrastructure,</text>
+    <text x="104" y="413">made</text>
+    <text x="104" y="526">visible.</text>
+  </g>
+
+  <!-- standfirst -->
+  <g font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="21" fill="#b3ada5">
+    <text x="106" y="598">A brand and product system designed for the public realm</text>
+    <text x="106" y="631">— sharp, restrained, and structured around conviction rather</text>
+    <text x="106" y="664">than process.</text>
+  </g>
+</svg>
